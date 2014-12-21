@@ -3,6 +3,7 @@ package com.lyh.laucher_lyh.app;
 import java.util.List;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.graphics.PorterDuff;
@@ -34,6 +35,8 @@ import com.lyh.laucher_lyh.app.utils.SystemUtil;
 import com.lyh.laucher_lyh.app.utils.ToastUtil;
 import com.lyh.laucher_lyh.json.JsonParser;
 import com.lyh.laucher_lyh.utils.KToast;
+import com.lyh.laucher_lyh.view.ConfirmDialog;
+import com.lyh.laucher_lyh.view.ConfirmDialog.OnDialogButtonClickListener;
 
 
 /**
@@ -49,6 +52,7 @@ public class AppGridItemAdapter extends BaseAdapter{
 	private AppIconCache mAppIconCache = null;
 	private RecognizerDialog mIatDialog;
 	private SpeechRecognizer mIat;
+	private boolean mIsFirstListener;
 	public AppGridItemAdapter(Context context) {
 		mContext = context;
 		mAppIconCache = new AppIconCache(mContext, true);
@@ -135,6 +139,7 @@ public class AppGridItemAdapter extends BaseAdapter{
 				
 				@Override
 				public void onClick(View arg0) {
+					mIsFirstListener = true;
 					KToast.showToastLong(mContext, "请说出你想要打开的应用");
 					startListenToUser();
 				}
@@ -184,13 +189,54 @@ public class AppGridItemAdapter extends BaseAdapter{
 		}
 	};
 	
+	private PackageInfo findApp(String word) {
+		for (int i=0;i<mDatas.size(); ++i) {
+			PackageInfo info = mDatas.get(i);
+			if (info.packageName.equals(mContext.getPackageName())){
+				continue;
+			}
+			CacheEntry entity = mAppIconCache.getAppIconAndLabel(info);
+			if (entity.label.contains(word)) {
+				return info;
+			}
+		}
+		return null;
+	}
+	
 	/**
 	 *
 	 */
 	private RecognizerDialogListener recognizerDialogListener=new RecognizerDialogListener(){
 		public void onResult(RecognizerResult results, boolean isLast) {
+			if (mIsFirstListener == false) {
+				return;
+			}
+			
 			String text = JsonParser.parseIatResult(results.getResultString());
-			KToast.showCenter(mContext, text, Toast.LENGTH_LONG);
+			KToast.showCenter(mContext,"识别语音为" + text, Toast.LENGTH_LONG);
+			
+			final PackageInfo info = findApp(text);
+			
+			if (info == null) {
+				KToast.showCenter(mContext,"没有找到 应用" + text , Toast.LENGTH_LONG);	
+			} else {
+				final CacheEntry entity = mAppIconCache.getAppIconAndLabel(info);
+				ConfirmDialog dialog = new ConfirmDialog(mContext, "是否打开", entity.label);
+				dialog.setOnConfirmButtonClickListener(new OnDialogButtonClickListener() {
+					
+					@Override
+					public void onClick(Dialog dialog, View v) {
+						if(!SystemUtil.runApp(mContext,info.packageName)){
+							ToastUtil.showToastCancelShowing(mContext, 
+									mContext.getString(R.string.open_app_failed), 
+									Toast.LENGTH_LONG);
+						}						
+					}
+				});
+				dialog.show();
+			}
+			
+			mIsFirstListener = false;
 		}
 
 
