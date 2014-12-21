@@ -84,6 +84,12 @@ public class AppUpdateListController implements LocalAppActionListener {
 		}
 		
 		for (PackageInfo pi : localAppList) {
+			
+			//不显示自己
+			if (pi.packageName.equals(mApplication.getPackageName())) {
+				continue;
+			}
+			
 			AppEntity app = new AppEntity();
 			Log.i("test"," get applist " + pi.packageName);
 			app.setPackageName(pi.packageName);
@@ -95,6 +101,7 @@ public class AppUpdateListController implements LocalAppActionListener {
 		// 通知本地应用监听者
 		notifyLocalAppList();
 	}
+	
 
 	// 初始化本地应用列表
 	private void initLocalAppList(final List<AppEntity> apps) {

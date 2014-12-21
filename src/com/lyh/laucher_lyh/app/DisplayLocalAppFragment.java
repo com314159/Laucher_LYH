@@ -92,9 +92,13 @@ public class DisplayLocalAppFragment extends Fragment implements LocalAppDisplay
 	public void onDestroy() {
 		super.onDestroy();
 	}
+	
 
 	private List<PackageInfo> toPackageInfo(List<AppEntity> appList) {
 		List<PackageInfo> all = new ArrayList<PackageInfo>();
+		PackageInfo searchInfo = new PackageInfo();
+		searchInfo.packageName = getActivity().getPackageName();
+		all.add(searchInfo);
 
 		// 获取PackageInfo
 		PackageManager pm = getActivity().getPackageManager();

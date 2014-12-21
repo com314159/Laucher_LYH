@@ -82,6 +82,39 @@ public class AppGridItemAdapter extends BaseAdapter{
 		
 		final PackageInfo packageInfo = mDatas.get(position);
 		
+		viewHolder.mImageView.setOnTouchListener(new OnTouchListener() {
+			@SuppressLint("ClickableViewAccessibility") @Override
+			public boolean onTouch(View v, MotionEvent event) {
+				switch (event.getActionMasked()){
+					
+		        	case MotionEvent.ACTION_DOWN: {
+		        		ImageView view = (ImageView) v;
+		        		view.getDrawable().setColorFilter(0x77000000, 
+		        				PorterDuff.Mode.SRC_ATOP);
+		        		v.invalidate();
+		        		break;
+		        	}
+		          
+		        	case MotionEvent.ACTION_UP:
+		        	case MotionEvent.ACTION_CANCEL: {
+		        		ImageView view = (ImageView) v;
+		        		view.getDrawable().clearColorFilter();
+		        		view.invalidate();
+		        		break;
+		          	}
+		        }
+				return false;
+			}
+		});
+		
+		if (packageInfo.packageName.equals(mContext.getPackageName())) {
+			viewHolder.mImageView.setImageResource(R.drawable.icon_search);
+			viewHolder.mTextView.setText("语音智能搜索");
+			viewHolder.mImageView.setOnLongClickListener(null);
+			viewHolder.mImageView.setOnClickListener(null);
+			return convertView;
+		}
+		
 		CacheEntry entity = mAppIconCache.getAppIconAndLabel(packageInfo);
 		
 		viewHolder.mTextView.setText(entity.label);
@@ -109,31 +142,6 @@ public class AppGridItemAdapter extends BaseAdapter{
 			}
 		});
 		
-		viewHolder.mImageView.setOnTouchListener(new OnTouchListener() {
-			@SuppressLint("ClickableViewAccessibility") @Override
-			public boolean onTouch(View v, MotionEvent event) {
-				switch (event.getActionMasked()){
-					
-		        	case MotionEvent.ACTION_DOWN: {
-		        		ImageView view = (ImageView) v;
-		        		view.getDrawable().setColorFilter(0x77000000, 
-		        				PorterDuff.Mode.SRC_ATOP);
-		        		v.invalidate();
-		        		break;
-		        	}
-		          
-		        	case MotionEvent.ACTION_UP:
-		        	case MotionEvent.ACTION_CANCEL: {
-		        		ImageView view = (ImageView) v;
-		        		view.getDrawable().clearColorFilter();
-		        		view.invalidate();
-		        		break;
-		          	}
-		        }
-				return false;
-			}
-		});
-
 		
 		return convertView;
 	}

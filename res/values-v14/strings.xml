@@ -2,7 +2,6 @@
 
 <resources>
 
-    <string name="app_name">学习中心</string>
     <string name="action_settings">设置</string>
     
     <string name="app_intro">\t\tKeyshare学习中心，是国内移动互联网领域优秀的教育应用和课程学习平台，让您可以随时随地学习，接受最好的教育。</string>
