@@ -1,0 +1,161 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+     <!-- App item layout -->
+    <dimen name="appitem_width">300dp</dimen>
+    <dimen name="appitem_height">80dp</dimen>
+    <dimen name="appitem_margin">30dp</dimen>
+    
+    <dimen name="appitem_viewline_width">1sp</dimen>
+    
+    <dimen name="appitem_imgview_width">56dp</dimen>
+    <dimen name="appitem_imgview_margin">8dp</dimen>
+    
+    <dimen name="appitem_appnametext_size">16sp</dimen>
+    <dimen name="appitem_appinfotext_size">16sp</dimen>
+    
+    <dimen name="appitem_button_width">50dp</dimen>
+    <dimen name="appitem_button_height">27dp</dimen>
+    <dimen name="appitem_progressbar_textsize">16sp</dimen>
+    
+    <dimen name="appitem_textview_number_width">27dp</dimen>
+    <dimen name="appitem_textview_number_textsize">16sp</dimen>
+    <dimen name="appitem_textview_number_margin">5dp</dimen>   
+    
+    <dimen name="appitem_star_height">14dp</dimen>
+    <dimen name="appitem_textview_margintop">5dp</dimen>
+    
+    <!-- recommend app list activity -->
+    <dimen name="activity_recommend_appitem_margin_top">20dp</dimen>
+    <dimen name="activity_recommend_appitem_margin_left">40dp</dimen>
+    <dimen name="activity_recommend_button_margin_top">15dp</dimen>
+    <dimen name="activity_recommend_button_margin_bottom">20dp</dimen>
+    <dimen name="activity_recommend_button_height">50dp</dimen>
+    
+	<!-- grid app item layout -->
+    <dimen name="appitemlayout_width">270dp</dimen>
+    <dimen name="appitemlayout_height">100dp</dimen>
+    <dimen name="appitemlayout_margin">5dp</dimen>
+    <dimen name="appitemlayout_imgview_width">72dp</dimen>
+    <dimen name="appitemlayout_imgview_margin">5dp</dimen>
+    <dimen name="appitemlayout_appnametext_size">18sp</dimen>
+    <dimen name="appitemlayout_appinfotext_size">15sp</dimen>
+    <dimen name="appitemlayout_viewline_width">1sp</dimen>
+    
+    <!-- App collection layout -->
+    <dimen name="appcollectionitem_width">300dp</dimen>
+    <dimen name="appcollectionitem_height">190dp</dimen>
+    <dimen name="appcollectionitem_imgview_width">220dp</dimen>
+    <dimen name="appcollectionitem_imgview_height">190dp</dimen>
+    <dimen name="appcollectionitem_imgview_margin">5dp</dimen>
+    <dimen name="appcollectionitem_appnametext_size">20sp</dimen>
+    <dimen name="appcollectionitem_appinfotext_size">18sp</dimen>
+    <dimen name="appcollectionitem_viewline_width">1sp</dimen>
+    
+    <!-- App local layout-->
+    <dimen name="applocal_layout_width">220dp</dimen>
+    <dimen name="applocal_icon_background_width">160dp</dimen>
+    <dimen name="applocal_icon_width">90dp</dimen>
+    <dimen name="applocal_img_text_margin">-20dp</dimen>
+    <dimen name="applocal_editflag_margin">20dp</dimen>
+    <dimen name="applocal_text_size">15sp</dimen>
+    
+    <!-- Tabs -->
+    <dimen name="tab_padding_top_bottom">2dp</dimen>
+    <dimen name="tab_padding_left_right">40dp</dimen>
+    <dimen name="tab_height">60dp</dimen>
+    <dimen name="text_size_micro">22sp</dimen>
+    
+    <!-- ViewPager -->
+    <dimen name="viewpager_margin_width">0dp</dimen>
+    <dimen name="viewpager_margin_stroke_width">0dp</dimen>
+    
+    <!-- List separator -->
+    <dimen name="list_separator_padding_left_right">8dp</dimen>
+    <dimen name="list_separator_min_height">32dp</dimen>
+    <dimen name="list_separator_container_padding_left">16dp</dimen>
+    
+    <!-- FastScroll padding -->
+    <dimen name="fast_scroll_padding_right">32dp</dimen>
+    
+    <!-- Bottom ActionBar -->
+    <dimen name="bottom_action_bar_height">48dp</dimen>
+    
+    <!-- AppList  Fragment -->
+    <dimen name="applist_fragment_progressbar_width">80dp</dimen>
+    
+    <!-- viewpager_and_indicator layout -->
+    <dimen name = "vai_indicator_marginTop">10dp</dimen>
+    <dimen name = "vai_indicator_marginbottom">5dp</dimen>
+	<dimen name = "vai_indicator_height">10dp</dimen>
+    
+	<!-- viewpager_grid layout -->
+	<dimen name="vg_grid_divider_thickness">1.0dip</dimen>
+    
+	<!-- app_dialog_layout -->
+	<dimen name="aid_txt_margin_top">5dp</dimen>
+	<dimen name="aid_tab_button_width">150dp</dimen>
+	<dimen name="aid_tab_button_height">40dp</dimen>
+	<dimen name="aid_tab_width">140dp</dimen>
+	
+	<!-- banner view -->
+    <dimen name="bannerview_pagerView_margin">15dp</dimen>
+    <dimen name="bannerview_item_margin">30dp</dimen>
+    
+	<!-- action bar home-->
+	<dimen name="actionbar_height">75dp</dimen>
+	<dimen name="actionbar_shadow_height">6dp</dimen>
+	<!-- actionbar_height = actionbar_shadow_height + actionbar_content_height -->
+	
+    <dimen name="actionBar_textSize_large">26sp</dimen>
+    <dimen name="actionBar_textSize_title">24sp</dimen>
+    <dimen name="actionBar_textSize_mid">22sp</dimen>
+    <dimen name="actionbar_homepage_tab_button_width">70dp</dimen>
+	
+    <dimen name="actionbar_search_width">60dp</dimen>
+	<dimen name="actionbar_search_height">35dp</dimen>
+	<dimen name="actionbar_search_textsize">22sp</dimen>
+	<dimen name="actionbar_search_ic_height">30dp</dimen>
+	
+	<dimen name="activity_search_height">40dp</dimen>
+	
+	<dimen name="actionbar_more_menu_width">60dp</dimen>
+	<dimen name="actionbar_more_menu_height">43dp</dimen>
+	
+	<!-- Rank Activity -->
+	<dimen name="activity_rank_margin">10dp</dimen>
+	<dimen name="activity_rank_linewidth">2dp</dimen>
+	
+	<!-- PopupWindow -->
+	<dimen name="popupwindow_width">120dp</dimen>
+	<dimen name="popupwindow_margin">20dp</dimen>
+	
+	<!-- 首页分类 -->
+	<dimen name="hc_text_margin">50dp</dimen>
+	<dimen name="hc_text_width">130dp</dimen>
+	
+	<!-- PopWindow -->
+	<dimen name="popwin_more_width">140dp</dimen>
+	<dimen name="popwin_all_width">200dp</dimen>
+	<dimen name="popwin_all_height">300dp</dimen>
+	
+	<!-- 滑动开关 -->
+	<dimen name="switch_offset">2dp</dimen>
+	
+	<!-- 图像倒影间距 -->
+	<dimen name="gap_image_reflection">3dp</dimen>
+	
+	<!-- 应用对话框 -->
+	<dimen name="app_diaglog_icon_width">100dp</dimen>
+    <dimen name="app_dialog_download_button_width">80dp</dimen>
+    <dimen name="app_dialog_download_button_height">30dp</dimen>
+    <dimen name="app_dialog_margin_top">15dp</dimen>
+   
+    <dimen name="app_dialog_switch_radius">8dp</dimen>
+    
+    <dimen name="app_cate_margin">20dp</dimen>
+    
+</resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">学习中心</string>
+    <string name="action_settings">设置</string>
+    
+    <string name="app_intro">\t\tKeyshare学习中心，是国内移动互联网领域优秀的教育应用和课程学习平台，让您可以随时随地学习，接受最好的教育。</string>
+	<string name="app_privacy">\t\t本最终用户条款（以下或简称「条款」）系由您与广州启学教育科技有限公司（以下简称「启学」）所订立的相关权利义务规范，用以描述启学向您提供服务及您使用服务所涉及的详细规定。了解更多请点击 http://42.96.160.145/management/agreement/</string>  
+	
+    <!-- XListView -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_footer_hint_normal">上拉加载</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="xlistview_hint_loading">正在加载</string>
+
+    <!-- ActionBar 默认文字 -->
+    <string name="actionbar_default_store">商店</string>
+    <string name="actionbar_default_learningcenter">学习中心</string>
+    <string name="actionbar_default_title">编辑推荐</string>
+    <string name="actionbar_default_search">搜索</string>
+
+    <!-- Button -->
+    <string name="button_download">下载</string>
+    <string name="button_previewimg">截图</string>
+    <string name="button_appdetail">详情</string>
+    <string name="button_download_text_free">免费</string>
+
+    <!-- App Collection Names -->
+    <string name="appcollection_themes">分类</string>
+    <string name="appcollection_rank_all">总排行</string>
+    <string name="appcollection_rank_month">月排行</string>
+    <string name="appcollection_rank_popular">好评排行</string>
+
+    <!-- PopupWindow -->
+    <string name="popupwindow_setting">设置</string>
+    <string name="popupwindow_about">关于</string>
+    <string name="popupwindow_persional_account">个人帐户</string>
+    <string name="popupwindow_download">下载管理</string>
+
+    <!-- 首页 -->
+    <string name="hc_middle_primary">中小学</string>
+    <string name="hc_preschool">学前教育</string>
+    <string name="hc_adult">成人教育</string>
+    <string name="home_show_all">显示全部</string>
+    <string name="home_bannel">主题</string>
+    <string name="home_free">新品上架</string>
+
+    <!-- 学习中心首页 -->
+    <string name="actionbar_lc_edit">编辑</string>
+    <string name="actionbar_lc_all">全部</string>
+    <string name="actionbar_lc_update">更新</string>
+    <string name="actionbar_editapp_uninstall">删除 </string>
+    <string name="actionbar_editapp_cancel">取消</string>
+    
+    <!-- warnning -->
+    <string name="warnning_update_none">没有可更新的软件</string>
+    <string name="warnning_edit_none">没有可编辑的软件</string>
+    <string name="warnning_root_none">设备未获取Root权限</string>
+    <string name="warnning_feedback_none">请先填写意见，谢谢！</string>
+    
+    <!-- error -->
+    <string name="error_app_run">软件无法打开</string>
+    <string name="error_app_install">抱歉，个人中心安装失败</string>
+    <string name="error_network_exception">很抱歉，数据加载出错了！</string>
+    <string name="error_padasf_uninstalled">没有安装Pada帐户中心</string>
+    <string name="error_download_exception">很抱歉，下载出错了！</string>
+    
+    <!-- hint -->
+    <string name="hint">提示</string>
+    <string name="refresh">刷新</string>
+    <string name="network_exception_hint">可能原因：\n1、网络未连接\n2、网络信号弱\n3、找不到请求的页面</string>
+    <string name="personel_account_uninstalled_hint">\t\t检测到您还未安装个人帐户，是否立即安装？</string>
+    <string name="select_app_hint">请先选择应用</string>
+    <string name="none_app_on_result">找不到相关的应用！</string>
+    <string name="set_learning_center_as_default">请选择学习中心，点击“始终”</string>
+    <string name="clear_default_setting">请查看“默认启动”，点击“清除默认设置”</string>
+    
+    <!-- dialog -->
+    <string name="dialog_btn_return">返回</string>
+    <string name="dialog_btn_submit">提交</string>
+    <string name="dialog_btn_finish">完成</string>
+    <string name="dialog_btn_confirm">确定</string>
+    
+    <!-- 关于 -->
+    <string name="dialog_about_title">关于学习中心</string>
+    <string name="dialog_about_content_intro">学习中心介绍</string>
+    <string name="dialog_about_content_version">版本 ：V</string>
+    <string name="dialog_about_content_checkupdate">检查更新</string>
+    <string name="dialog_about_content_feedback">用户反馈</string>
+    <string name="dialog_about_content_privacy">使用条款与隐私协议</string>
+    
+    <string name="dialog_feedback_email">联系邮箱 : </string>
+    <string name="dialog_feedback_email_hint">请在里这输入您的邮箱</string>
+    <string name="dialog_feedback_hint">请在这里输入您的意见</string>
+    <string name="dialog_feedback_submit">谢谢您的宝贵意见！</string>
+    
+    <string name="dialog_setting_finish_sound">下载完成提示音</string>
+    <string name="dialog_setting_finish_install">下载完成安装</string>
+    <string name="dialog_setting_root">使用Root权限</string>
+    <string name="dialog_setting_deleteapk">安装后删除安装包</string>
+    <string name="dialog_setting_parent_control">家长控制</string>
+    <string name="dialog_setting_parent_password">设置家长密码</string>
+    
+    <string name="dialog_parent_setting_password">密码 : </string>
+    <string name="dialog_parent_setting_password_old">旧密码 : </string>
+    <string name="dialog_parent_setting_password_new">新密码 : </string>
+    
+    <string name="dialog_parent_password_input">输入家长密码</string>
+    <string name="dialog_parent_password_input_hint">输入的密码至少包含6个字符</string>
+    
+    <string name="dialog_parent_password_error_hint">密码输入错误</string>
+    <string name="dialog_parent_password_old_error_hint">旧密码输入错误</string>
+    <string name="dialog_parent_password_invalid_hint">密码不符合要求</string>
+    
+    <string name="dialog_guide_home_app_setting_hint">\t\t请先将学习中心设置为默认启动程序（如上图操作），关闭家长控制后自动恢复原来的设置。\n</string>
+    <string name="dialog_guide_home_app_clear_hint">\t\t发现您的设备已锁定其他程序，请先清除默认设置（如上图操作）。\n</string>
+    
+    <string name="dialog_parent_password_setting_success_hint">密码设置成功</string>
+    <string name="dialog_parent_password_input_success_hint">密码正确</string>
+    
+    <string name="dialog_install_title_account">个人帐户安装</string>
+    <string name="dialog_install_btn_install">安装</string>
+    <string name="dialog_install_btn_cancel">取消</string>
+
+    <!-- 下载 -->
+    <string name="download_install">安装</string>
+    <string name="download_installing">安装中</string>
+    <string name="update">升级</string>
+    <string name="open">打开</string>
+    
+    <string name="download_manager">下载管理</string>
+    <string name="back">返回</string>
+    
+    <string name="have_no_root_permission_toast">检测到您的设备没有root成功</string>
+    
+    <string name="byteShort">B</string>
+    <string name="kilobyteShort">KB</string>
+    <string name="megabyteShort">MB</string>
+    <string name="gigabyteShort">GB</string>
+    <string name="terabyteShort">TB</string>
+    <string name="petabyteShort">PB</string>
+    <string name="fileSizeSuffix">%1$s %2$s</string>
+    
+    <string name="no_netWork">无法连接到网络</string>
+    
+    <string name="no_file">安装包已删除请重新下载</string>
+    <string name="open_app_failed">打开应用失败,请检查sd卡是否已经卸载</string>
+    
+    <!-- 推荐应用列表界面 -->
+    <string name="activity_recommend_applist_button_install">安装</string>
+    <string name="activity_recommend_applist_button_skip">跳过安装</string>
+    
+    <string name="open_learningcenter">打开学习中心</string>
+    <string name="install_recommend_app">安装推荐应用</string>
+	
+</resources>

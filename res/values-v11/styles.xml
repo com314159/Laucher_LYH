@@ -1,13 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-      <style name="dialog" parent="@android:style/Theme.Dialog">
-  <item name="android:windowFrame">@null</item>
-  <item name="android:windowIsFloating">true</item>
-  <item name="android:windowIsTranslucent">true</item>
-  <item name="android:windowNoTitle">true</item>
-  <item name="android:background">@android:color/transparent</item>
-  <item name="android:windowBackground">@android:color/transparent</item>
-  <item name="android:backgroundDimEnabled">true</item>
-  <item name="android:backgroundDimAmount">0.6</item>
- </style>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Tips Apearance -->
+
+
+
+    <style name="CustomTabPageIndicator.Text" parent="android:TextAppearance.Medium">
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="LoginFormContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+    </style>
+    
+    <style name="Dialog.customStyle" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item> 
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>      	 
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <!-- dialog全屏不能继承父dialog属性 -->
+    <style name="NormalFullScreenDialogStyle"> 
+        <item  name="android:windowFullscreen">false</item>
+        <item name="android:windowNoTitle">true</item> 
+    </style>
+    
+    <style name="FontA">
+       	<item name="android:textSize">13dp</item> 
+       	<item name="android:textColor">#777777</item>
+    </style>
+
+	
+	<style name="bottom_button_text">
+        <item name="android:textSize">18dp</item> 
+        <item name="android:textColor">@color/white</item>   	    
+	</style>
+    
+	<style 
+	    name="titleStyle">
+		<item name="android:textSize">16dp</item>
+		<item name="android:textColor">#484848</item>
+	</style>
+	
+	
+	<style 
+	    name="commentStyle"
+	    >
+		<item name="android:textSize">10dp</item>
+		<item name="android:textColor">#484848</item>
+	</style>
+	
+	<style name="contentStyle">
+	    <item name="android:textSize">16dp</item>
+	    <item name="android:textColor">#777777</item>
+	    <item name="android:lineSpacingExtra">4dip</item>
+	</style>
+	
+	<style name="style_gray">
+		<item name="android:textSize">16dp</item>
+		<item name="android:textColor">#aaaaaa</item>
+	</style>
+	
+	<style name="text_normal_button">
+		<item name="android:textSize">18dp</item>
+		<item name="android:textColor">@color/white</item>	    
+	</style>
+	
+	<style name="text_discuss_detail">
+		<item name="android:textSize">18dp</item>
+		<item name="android:textColor">#484848</item>	    
+	</style>
+	
+<!-- 	没有内容的提示 -->
+	<style name="no_content_hint_text_style">
+		<item name="android:textSize">18dp</item>
+		<item name="android:textColor">#484848</item>	   	    
+	</style>
+	
 </resources>

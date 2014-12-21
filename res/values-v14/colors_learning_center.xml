@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+   <color name="default_background">#f4f4f4</color> 
+    <color name="transparent">#00000000</color>
+    <color name="background">@color/default_background</color>
+    <color name="background_recommend">#eff3f7</color>
+    <color name="lightgray">#cccccc</color>
+    <color name="gray">#929da9</color>
+    
+    <!-- Tab -->
+    <color name="tab_text_selected">#00a2ff</color>
+    <color name="tab_text_unselected">#3d474e</color>
+    
+    <color name="blue_dark">#ff0099cc</color>
+    
+    <color name="background_grid_item">#fff7f7f7</color>
+    <color name="list_item_bg_color_pressed">#ffebebeb</color>
+    <color name="divider_color_grid">#ffe2e3e3</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_light">#4e5a63</color>
+    <color name="aid_tab_blue">#00A2FF</color>
+    <color name="aid_app_detail_gray">#A7A7A7</color>
+    <color name="bannerview_background">#14079702</color>
+    <color name="actionbar_background">#EFF3F7</color>
+    <color name="indicator_fill_color">#5A666A</color>
+    <color name="indicator_page_color">#CFDBE2</color>
+    
+    <color name="hc_text_background">#CFDBE2</color>
+    <color name="hc_text">#3D474E</color>
+    
+    <color name="text_red">#ff5e5a</color>
+    
+    <color name="dialog_background">#cc454647</color>
+	
+    <color name="processbar_background">#F4F4F4</color>
+    <color name="processbar_process">#3BAA24</color>
+	
+    <color name="switch_gray">#C9C9C9</color>
+</resources>

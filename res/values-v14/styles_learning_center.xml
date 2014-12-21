@@ -1,0 +1,108 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+      
+
+   
+    <style name="appNameStyle">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">#4e5a63</item>
+    </style>
+    
+    <style name="appDetailStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxEms">4</item>
+    </style>
+    
+
+    <style name="DialogNoTitleNotFullScreen" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style> 
+    
+   <style name="DialogNoTititleFullScreen" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style> 
+   
+   <style name="actionbar_text_default_style">
+       <item name="android:textColor">@color/aid_tab_blue</item>
+       <item name="android:textSize">@dimen/actionBar_textSize_large</item>
+   </style>
+   
+   <style name="actionbar_text_red_style">
+       <item name="android:textColor">@color/text_red</item>
+       <item name="android:textSize">@dimen/actionBar_textSize_large</item>
+   </style>
+   
+
+   <style name="dialog_title_style">
+       <item name="android:textSize">30sp</item>
+   	   <item name="android:textColor">@color/black_light</item>
+    </style>
+    
+   <style name="download_small_text">
+       <item name="android:textSize">18sp</item>
+       <item name="android:textColor">@color/aid_tab_blue</item>
+   </style>
+   
+
+   
+   <style name="home_left_text">
+        <item name="android:textSize">22sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/hc_text</item>
+   </style>
+   
+
+   <style name="dialog_title">
+       <item name="android:textStyle">bold</item>
+       <item name="android:textSize">24sp</item>
+       <item name="android:textColor">#4e5a63</item>
+   </style>
+   
+   <style name="dialog_content">
+       <item name="android:textSize">20sp</item>
+       <item name="android:textColor">#4e5a63</item>
+   </style>
+   
+   <style name="dialog_btn">
+       <item name="android:textSize">22sp</item>
+       <item name="android:textColor">#00a2ff</item>
+   </style>
+   
+   <style name="dialog_content_btn">
+       <item name="android:textSize">20sp</item>
+       <item name="android:textColor">#00a2ff</item>
+   </style>
+   
+   <style name="dialog" parent="android:style/Theme.Dialog">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:background">#00ffffff</item>
+		<item name="android:windowBackground">@color/transparent</item>
+		<item name="android:colorBackgroundCacheHint">@null</item>
+		<item name="android:windowIsTranslucent">true</item>
+	</style>
+	
+   <style name="line_style">
+       <item name="android:layout_width">match_parent</item>
+       <item name="android:layout_height">1dp</item>
+       <item name="android:background">@color/lightgray</item>
+   </style>
+	
+</resources>

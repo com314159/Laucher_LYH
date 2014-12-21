@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="90dp"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+   	
+    <ImageView 
+		android:layout_width="90dp"
+		android:layout_height="90dp"
+		android:id="@+id/imageview"
+		android:layout_gravity="center_horizontal"
+		android:clickable="true"
+		android:src="@drawable/ic_launcher"
+        />
+
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="安卓原生应用"
+        style="@style/contentStyle"
+        />
+</LinearLayout>

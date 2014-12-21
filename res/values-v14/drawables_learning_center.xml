@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <drawable name="white">#ffffff</drawable>
+        <drawable name="black">#000000</drawable>
+        <drawable name="black_light">#4e5a63</drawable>
+        <drawable name="aid_tab_blue">#00A2FF</drawable>
+        <drawable name="home_page_show_more_p">#CFDBE2</drawable>
+        <drawable name="home_page_show_more_n">#3D474E</drawable>
+        <drawable name="gray_drawable">#7A7A7A</drawable>
+</resources>

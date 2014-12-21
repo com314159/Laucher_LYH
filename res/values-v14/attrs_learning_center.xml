@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- TextProgressBar的属性 -->
+<resources>
+    <declare-styleable name="TextProgressBar">
+        <attr name="TextProgressBar_text" format="string" />
+        <attr name="TextProgressBar_textColor" format="color" />
+        <attr name="TextProgressBar_textSize" format="dimension"></attr>
+    </declare-styleable>
+</resources>
