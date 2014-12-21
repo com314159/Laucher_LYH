@@ -53,13 +53,29 @@
         <activity
             android:name="com.lyh.laucher_lyh.MainActivity"
             android:label="@string/app_name" >
+
+        </activity>
+        
+        <activity 
+            android:name="com.lyh.laucher_lyh.AppActivity"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>            
         </activity>
         
+		<receiver android:name="com.lyh.laucher_lyh.app.LocalAppActionReceiver" 
+            android:exported="true"
+            android:enabled="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
         
 <!--         jpush start  -->
        <!-- Required -->
