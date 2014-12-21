@@ -16,7 +16,6 @@ public class AppActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.app_layout);
 		mFragmentManager = getFragmentManager();
-		mAppFragment = (DisplayLocalAppFragment) mFragmentManager.findFragmentById(R.id.fragment);
 		if (mAppFragment == null) {
 			mAppFragment = new DisplayLocalAppFragment();
 		}
@@ -25,4 +24,6 @@ public class AppActivity extends Activity{
 		transaction.show(mAppFragment);
 		transaction.commit();
 	}
+	
+	
 }
