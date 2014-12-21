@@ -17,8 +17,9 @@ import com.iflytek.cloud.SpeechError;
 import com.iflytek.cloud.SpeechRecognizer;
 import com.iflytek.cloud.ui.RecognizerDialog;
 import com.iflytek.cloud.ui.RecognizerDialogListener;
-import com.iflytek.voicedemo.R;
+import com.lyh.laucher_lyh.R;
 import com.lyh.laucher_lyh.json.JsonParser;
+import com.lyh.laucher_lyh.utils.KToast;
 
 public class MainActivity extends Activity {
 	private static final String TAG = "MainActivity";
