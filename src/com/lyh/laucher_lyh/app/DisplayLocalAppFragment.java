@@ -65,9 +65,14 @@ public class DisplayLocalAppFragment extends Fragment implements LocalAppDisplay
 
 	@Override
 	public void onLocalAppsReturn(List<AppEntity> apps, Object tag) {
+		
+		Log.i(TAG, " on Local appsReturn");
+		
 		if ((null == tag || null == apps || tag.equals(AppUpdateListController.TAG_WAITTING))) {
 			return;
 		}
+		
+		Log.i(TAG, " appsReturn size is " + apps.size());
 
 		mLocalApps = apps;
 		mLocalPackageInfos = toPackageInfo(apps);

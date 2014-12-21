@@ -83,14 +83,15 @@ public class AppUpdateListController implements LocalAppActionListener {
 			return;
 		}
 		
-		mInit = false;
 		for (PackageInfo pi : localAppList) {
 			AppEntity app = new AppEntity();
+			Log.i("test"," get applist " + pi.packageName);
 			app.setPackageName(pi.packageName);
 			app.setVersionCode(pi.versionCode);
 			app.setVersionName(pi.versionName);
 			mLocalAppList.add(app);
 		}
+		mInit = true;
 		// 通知本地应用监听者
 		notifyLocalAppList();
 	}

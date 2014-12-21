@@ -4,7 +4,7 @@ import android.app.Application;
 import cn.jpush.android.api.JPushInterface;
 
 import com.iflytek.cloud.SpeechUtility;
-import com.lyh.laucher_lyh.app.appLoader.LocalAppActionInformer;
+import com.lyh.laucher_lyh.app.appLoader.AppUpdateListController;
 
 public class MainApplication extends Application{
 	
@@ -14,6 +14,6 @@ public class MainApplication extends Application{
 		SpeechUtility.createUtility(this, "appid="+ "54904469");
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
-        LocalAppActionInformer.getInstance().init(this);
+        AppUpdateListController.getInstance().init(this);
 	}
 }
