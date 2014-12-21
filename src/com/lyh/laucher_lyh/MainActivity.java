@@ -10,34 +10,30 @@ import android.widget.Toast;
 
 import com.iflytek.cloud.ErrorCode;
 import com.iflytek.cloud.InitListener;
-import com.iflytek.cloud.RecognizerListener;
 import com.iflytek.cloud.RecognizerResult;
 import com.iflytek.cloud.SpeechConstant;
 import com.iflytek.cloud.SpeechError;
 import com.iflytek.cloud.SpeechRecognizer;
 import com.iflytek.cloud.ui.RecognizerDialog;
 import com.iflytek.cloud.ui.RecognizerDialogListener;
-import com.lyh.laucher_lyh.R;
 import com.lyh.laucher_lyh.json.JsonParser;
 import com.lyh.laucher_lyh.utils.KToast;
 
 public class MainActivity extends Activity {
 	private static final String TAG = "MainActivity";
 	private RecognizerDialog mIatDialog;
-	// ÓïÒôÌıĞ´¶ÔÏó
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½ï¿½
 	private SpeechRecognizer mIat;
 	Button mButton;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		// ³õÊ¼»¯Ê¶±ğ¶ÔÏó
 		mIat = SpeechRecognizer.createRecognizer(this,null);
 		mIat.setParameter(SpeechConstant.DOMAIN, "iat");
 
 	    mIat.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_CLOUD);
 	    
-		// ³õÊ¼»¯ÌıĞ´Dialog,Èç¹ûÖ»Ê¹ÓÃÓĞUIÌıĞ´¹¦ÄÜ,ÎŞĞè´´½¨SpeechRecognizer
 		mIatDialog = new RecognizerDialog(this,mInitListener);
 		mButton = (Button) findViewById(R.id.button);
 		
@@ -54,51 +50,20 @@ public class MainActivity extends Activity {
 		mIatDialog.setListener(recognizerDialogListener);
 		mIatDialog.show();
 	}
-	
-	/**
-	 * ³õÊ¼»¯¼àÌıÆ÷¡£
-	 */
+
 	private InitListener mInitListener = new InitListener() {
 
 		@Override
 		public void onInit(int code) {
 			Log.d(TAG, "SpeechRecognizer init() code = " + code);
 			if (code != ErrorCode.SUCCESS) {
-        		KToast.showToastLong(MainActivity.this, "³õÊ¼»¯ÓïÒôÊ§°Ü");
+        		KToast.showToastLong(MainActivity.this, "åˆå§‹åŒ–å¤±è´¥");
         	}
 		}
 	};
 	
-	private RecognizerListener mListener = new RecognizerListener() {
-		
-		@Override
-		public void onVolumeChanged(int arg0) {
-		}
-		
-		@Override
-		public void onResult(RecognizerResult arg0, boolean arg1) {
-			Log.d(TAG, arg0.getResultString());
-		}
-		
-		@Override
-		public void onEvent(int arg0, int arg1, int arg2, Bundle arg3) {
-		}
-		
-		@Override
-		public void onError(SpeechError arg0) {
-		}
-		
-		@Override
-		public void onEndOfSpeech() {
-		}
-		
-		@Override
-		public void onBeginOfSpeech() {
-		}
-	};
-	
 	/**
-	 * ÌıĞ´UI¼àÌıÆ÷
+	 *
 	 */
 	private RecognizerDialogListener recognizerDialogListener=new RecognizerDialogListener(){
 		public void onResult(RecognizerResult results, boolean isLast) {
@@ -107,7 +72,7 @@ public class MainActivity extends Activity {
 		}
 
 		/**
-		 * Ê¶±ğ»Øµ÷´íÎó.
+		 * Ê¶ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½.
 		 */
 		public void onError(SpeechError error) {
 			
@@ -118,16 +83,16 @@ public class MainActivity extends Activity {
 	
 
 	/**
-	 * ²ÎÊıÉèÖÃ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param param
 	 * @return 
 	 */
 	public void setParam(){
-		// Çå¿Õ²ÎÊı
+		// ï¿½ï¿½Õ²ï¿½ï¿½ï¿½
 		mIat.setParameter(SpeechConstant.PARAMS, null);
-			// ÉèÖÃÓïÑÔ
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	    mIat.setParameter(SpeechConstant.LANGUAGE, "zh_cn");
-			// ÉèÖÃÓïÑÔÇøÓò
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	    mIat.setParameter(SpeechConstant.ACCENT,"mandarin");
 	
 	    mIat.setParameter(SpeechConstant.ASR_AUDIO_PATH, Environment.getExternalStorageDirectory()+"/LYH/wavaudio.pcm");
