@@ -21,10 +21,6 @@ import com.lyh.laucher_lyh.app.appLoader.AppUpdateListController;
 import com.lyh.laucher_lyh.app.entity.AppEntity;
 import com.lyh.laucher_lyh.app.listener.LocalAppDisplayListener;
 
-/**
- * @author ZhiCheng Guo
- * @version 2014�?11�?25�? 上午10:23:50
- */
 public class DisplayLocalAppFragment extends Fragment implements LocalAppDisplayListener{
 	private static final String TAG = "DisplayLocalAppFragment";
 	private List<AppEntity> mLocalApps = null;

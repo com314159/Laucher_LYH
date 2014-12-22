@@ -39,10 +39,6 @@ import com.lyh.laucher_lyh.view.ConfirmDialog;
 import com.lyh.laucher_lyh.view.ConfirmDialog.OnDialogButtonClickListener;
 
 
-/**
- * @author ZhiCheng Guo
- * @version 2014�?11�?25�? 下午3:20:51
- */
 public class AppGridItemAdapter extends BaseAdapter{
 	@SuppressWarnings("unused")
 	private static final String TAG = AppGridItemAdapter.class.getSimpleName();
