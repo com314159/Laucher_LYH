@@ -8,6 +8,10 @@ import android.app.Fragment;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -29,6 +33,8 @@ public class DisplayLocalAppFragment extends Fragment implements LocalAppDisplay
 	private GridView mAppGridView;
 	private AppGridItemAdapter mGridItemAdapter;
 	private UpdateHandler mHandler = null;
+	private ViewGroup mRootViewGroup;
+	private String mFilePath;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +48,9 @@ public class DisplayLocalAppFragment extends Fragment implements LocalAppDisplay
 		AppUpdateListController.getInstance().addLocalAppDisplayListener(this);
 
 		View rootView = inflater.inflate(R.layout.local_app_layout, container, false);
+		
+		mRootViewGroup = (ViewGroup) rootView.findViewById(R.id.linearLayout);
+		setBackground();
 		mAppGridView = (GridView) rootView.findViewById(R.id.gridview);
 		mGridItemAdapter = new AppGridItemAdapter(getActivity());
 		mAppGridView.setAdapter(mGridItemAdapter);
@@ -51,6 +60,19 @@ public class DisplayLocalAppFragment extends Fragment implements LocalAppDisplay
 		}
 		
 		return rootView;
+	}
+	
+	public void setBackground(String filePath){
+		mFilePath = filePath;
+		if (mRootViewGroup != null) {
+			setBackground();
+		}
+	}
+	
+	private void setBackground() {
+		Bitmap bmp= BitmapFactory.decodeFile(mFilePath);
+		Drawable drawable = new BitmapDrawable(bmp);  
+		mRootViewGroup.setBackgroundDrawable(drawable);
 	}
 	
 	@Override

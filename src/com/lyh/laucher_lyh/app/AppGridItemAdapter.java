@@ -3,11 +3,14 @@ package com.lyh.laucher_lyh.app;
 import java.util.List;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.graphics.PorterDuff;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -27,6 +30,7 @@ import com.iflytek.cloud.SpeechError;
 import com.iflytek.cloud.SpeechRecognizer;
 import com.iflytek.cloud.ui.RecognizerDialog;
 import com.iflytek.cloud.ui.RecognizerDialogListener;
+import com.lyh.laucher_lyh.AppActivity;
 import com.lyh.laucher_lyh.R;
 import com.lyh.laucher_lyh.app.utils.AppIconCache;
 import com.lyh.laucher_lyh.app.utils.AppIconCache.CacheEntry;
@@ -170,7 +174,10 @@ public class AppGridItemAdapter extends BaseAdapter{
 				
 				@Override
 				public void onClick(View arg0) {
-					KToast.showToastLong(mContext, "更换壁纸");
+					Intent intent = new Intent(Intent.ACTION_PICK, null);
+					intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+							"image/*");
+					((Activity)mContext).startActivityForResult(intent, AppActivity.REQUEST_CODE_SELECT_FROM_GALERY);
 				}
 			});
 			return convertView;
