@@ -49,6 +49,14 @@ public class AppGridItemAdapter extends BaseAdapter{
 	private RecognizerDialog mIatDialog;
 	private SpeechRecognizer mIat;
 	private boolean mIsFirstListener;
+	
+	//语音智能搜索
+	public static final String Search_PackageName = "a";
+	//更换壁纸
+	public static final String Change_Background_PackageName = "b";
+	//天气
+	public static final String Wheather_PackageName = "c";
+	
 	public AppGridItemAdapter(Context context) {
 		mContext = context;
 		mAppIconCache = new AppIconCache(mContext, true);
@@ -62,6 +70,7 @@ public class AppGridItemAdapter extends BaseAdapter{
 	
 	public void setData(List<PackageInfo> data) {
 		mDatas = data;
+		
 		notifyDataSetChanged();
 	}
 	
@@ -127,7 +136,7 @@ public class AppGridItemAdapter extends BaseAdapter{
 			}
 		});
 		
-		if (packageInfo.packageName.equals(mContext.getPackageName())) {
+		if (packageInfo.packageName.equals(Search_PackageName)) {
 			viewHolder.mImageView.setImageResource(R.drawable.icon_search);
 			viewHolder.mTextView.setText("语音智能搜索");
 			viewHolder.mImageView.setOnLongClickListener(null);
@@ -138,6 +147,30 @@ public class AppGridItemAdapter extends BaseAdapter{
 					mIsFirstListener = true;
 					KToast.showToastLong(mContext, "请说出你想要打开的应用");
 					startListenToUser();
+				}
+			});
+			return convertView;
+		} else if (packageInfo.packageName.equals(Wheather_PackageName)) {
+			viewHolder.mImageView.setImageResource(R.drawable.weather);
+			viewHolder.mTextView.setText("天气");
+			viewHolder.mImageView.setOnLongClickListener(null);
+			viewHolder.mImageView.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View arg0) {
+					KToast.showToastLong(mContext, "天气预报在此");
+				}
+			});
+			return convertView;
+		} else if (packageInfo.packageName.equals(Change_Background_PackageName)) {
+			viewHolder.mImageView.setImageResource(R.drawable.change_background);
+			viewHolder.mTextView.setText("更换壁纸");
+			viewHolder.mImageView.setOnLongClickListener(null);
+			viewHolder.mImageView.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View arg0) {
+					KToast.showToastLong(mContext, "更换壁纸");
 				}
 			});
 			return convertView;

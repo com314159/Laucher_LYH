@@ -92,9 +92,21 @@ public class DisplayLocalAppFragment extends Fragment implements LocalAppDisplay
 
 	private List<PackageInfo> toPackageInfo(List<AppEntity> appList) {
 		List<PackageInfo> all = new ArrayList<PackageInfo>();
+		
+		PackageInfo wheather = new PackageInfo();
+		wheather.packageName = AppGridItemAdapter.Wheather_PackageName;
+		all.add(0,wheather);	
+
+		PackageInfo changeBackground = new PackageInfo();
+		changeBackground.packageName = AppGridItemAdapter.Change_Background_PackageName;
+		all.add(0,changeBackground);
+		
 		PackageInfo searchInfo = new PackageInfo();
-		searchInfo.packageName = getActivity().getPackageName();
-		all.add(searchInfo);
+		searchInfo.packageName = AppGridItemAdapter.Search_PackageName;
+		all.add(0,searchInfo);
+		
+
+
 
 		// 获取PackageInfo
 		PackageManager pm = getActivity().getPackageManager();
